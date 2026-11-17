@@ -46,6 +46,6 @@ for (let i = 0; i < 3; i++) {
 
 Fyll i med egna ord:
 
-- En variabel som skapas inuti en funktion kan ... utanför funktionen.
-- En funktion kan se variabler som ligger ... den.
-- `let i` i en for-loop lever ...
+- En variabel som skapas inuti en funktion kan ej ses utanför funktionen.
+- En funktion kan se variabler som ligger utanför den.
+- `let i` i en for-loop lever inuti loopen
