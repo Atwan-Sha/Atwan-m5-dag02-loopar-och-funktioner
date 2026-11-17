@@ -100,9 +100,14 @@ export function kvittorad(namn: string, antal: number, pris: number): string {
 
 // 10. Pilfunktioner. Skriv dem själv med const och =>.
 //     dubbla(4) ger 8. ärJämnt(4) ger true.
-export const dubbla = (n: number): number => {
-	// TODO
-};
+export const dubbla = (n: number): number => n * 2; // kan skrivas med implicit return också
+
 export const ärJämnt = (n: number): boolean => {
-	// TODO
+	return n % 2 === 0;
 };
+//* Skillnad på vanlig funktionsdeklaration:
+//* Hoisting: vanlig funktion kan köras i koden innan den deklareras,
+//* pilfunktion behöver deklareras först, precis som variabler.
+//* Scope med this-keyword: en pilfunktion ärver this.[variabeln] från kringliggande scopet, 
+//* t.ex. i klasser och callback-funktioner.
+
