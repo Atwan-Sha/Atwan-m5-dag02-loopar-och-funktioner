@@ -30,7 +30,21 @@ export function medRabatt(pris: number, procent: number): number {
 // 4. Är kaféet öppet? Vardagar 7–18, helger (lördag, söndag) 9–16.
 //    Öppnar vid starttimmen, stänger vid sluttimmen (18 är stängt).
 export function ärÖppet(veckodag: string, klockslag: number): boolean {
-	// TODO
+	let open: boolean = false;
+	if (
+		(veckodag === 'lördag' || veckodag === 'söndag') &&
+		klockslag >= 9 &&
+		klockslag < 16
+	) {
+		open = true;
+	} else if (
+		!(veckodag === 'lördag' || veckodag === 'söndag') &&
+		klockslag >= 7 &&
+		klockslag < 18
+	) {
+		open = true;
+	}
+	return open;
 }
 
 // 5. Summan av alla tal i listan, med en loop. summa([1, 2, 3]) ger 6.
